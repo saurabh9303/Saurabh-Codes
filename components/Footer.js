@@ -1,5 +1,6 @@
 "use client";
 import SmartLink from "@/components/SmartLink";
+import Image from 'next/image';
 
 export default function Footer() {
     return (
@@ -45,15 +46,17 @@ export default function Footer() {
                 <div>
                     <h3 className="text-lg font-semibold text-[#a78bfa] mb-4">Connect</h3>
                     <div className="flex space-x-5 mb-4">
-                        <a href="https://github.com/saurabh9303" target="_blank" rel="noopener noreferrer" className="p-2 bg-[#1e2332] rounded-full hover:bg-[#2c3a51] transition">
-                            <img src="/images/github.png" alt="GitHub" width={22} height={22} className="rounded-full" />
-                        </a>
-                        <a href="https://www.linkedin.com/in/saurabh-kumar-b19256364/" target="_blank" rel="noopener noreferrer" className="p-2 bg-[#1e2332] rounded-full hover:bg-[#2c3a51] transition">
-                            <img src="/images/linkedin.png" alt="LinkedIn" width={22} height={22} className="rounded-full" />
-                        </a>
-                        <a href="mailto:saurabhkumar930308@gmail.com" className="p-2 bg-[#1e2332] rounded-full hover:bg-[#8ab4f8] transition">
-                            <img src="/images/mail.png" alt="Email" width={22} height={22} className="rounded-full" />
-                        </a>
+                        <div className="flex space-x-5 mb-4">
+                            <a href="https://github.com/saurabh9303" target="_blank" rel="noopener noreferrer" className="p-2 bg-[#1e2332] rounded-full hover:bg-[#2c3a51] transition">
+                                <Image src="/images/github.png" alt="GitHub" width={22} height={22} className="rounded-full" />
+                            </a>
+                            <a href="https://www.linkedin.com/in/saurabh-kumar-b19256364/" target="_blank" rel="noopener noreferrer" className="p-2 bg-[#1e2332] rounded-full hover:bg-[#2c3a51] transition">
+                                <Image src="/images/linkedin.png" alt="LinkedIn" width={22} height={22} className="rounded-full" />
+                            </a>
+                            <a href="mailto:saurabhkumar930308@gmail.com" className="p-2 bg-[#1e2332] rounded-full hover:bg-[#8ab4f8] transition">
+                                <Image src="/images/mail.png" alt="Email" width={22} height={22} className="rounded-full" />
+                            </a>
+                        </div>
                     </div>
                     <p className="text-sm text-gray-400">Join us to stay updated with new blogs & features.</p>
                     <form className="mt-3 flex">

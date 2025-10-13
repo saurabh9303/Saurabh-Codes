@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import SmartLink from "@/components/SmartLink";
 import { useSession, signOut } from "next-auth/react";
+import Image from 'next/image';
 
 export default function ResponsiveNav() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -72,10 +73,12 @@ export default function ResponsiveNav() {
                                 {/* User Profile */}
                                 <SmartLink href="/dashboard" className="flex items-center gap-2 hover:opacity-80 transition-opacity duration-300">
                                     {session.user.image ? (
-                                        <img
-                                            src={session.user.image}
+                                        <Image
+                                            src={session.user.image || "/default-user.png"}
                                             alt={session.user.name || "User"}
-                                            className="w-9 h-9 rounded-full border-2 border-[#38bdf8] object-cover cursor-pointer"
+                                            width={36}   // Tailwind w-9 = 36px
+                                            height={36}  // Tailwind h-9 = 36px
+                                            className="rounded-full border-2 border-[#38bdf8] object-cover cursor-pointer"
                                         />
                                     ) : (
                                         <div className="w-9 h-9 rounded-full bg-gradient-to-br from-[#38bdf8] to-[#0ea5e9] flex items-center justify-center text-white font-semibold text-sm border-2 border-[#38bdf8] cursor-pointer">
@@ -196,15 +199,18 @@ export default function ResponsiveNav() {
                                         className="flex items-center gap-3 px-4 py-2 bg-gray-700/30 rounded-lg hover:bg-gray-700/50 transition-all duration-300 cursor-pointer"
                                     >
                                         {session.user.image ? (
-                                            <img
-                                                src={session.user.image}
-                                                alt={session.user.name || "User"}
-                                                className="w-10 h-10 rounded-full border-2 border-[#38bdf8] object-cover"
-                                            />
+
+                                        <Image
+                                            src={session.user.image || "/default-user.png"} // fallback अगर image ना हो
+                                            alt={session.user.name || "User"}
+                                            width={40}   // Tailwind w-10 = 40px
+                                            height={40}  // Tailwind h-10 = 40px
+                                            className="rounded-full border-2 border-[#38bdf8] object-cover"
+                                        />
                                         ) : (
-                                            <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#38bdf8] to-[#0ea5e9] flex items-center justify-center text-white font-semibold border-2 border-[#38bdf8]">
-                                                {session.user.name?.charAt(0).toUpperCase() || "U"}
-                                            </div>
+                                        <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#38bdf8] to-[#0ea5e9] flex items-center justify-center text-white font-semibold border-2 border-[#38bdf8]">
+                                            {session.user.name?.charAt(0).toUpperCase() || "U"}
+                                        </div>
                                         )}
                                         <div className="flex-1 min-w-0">
                                             <div className="text-white font-medium truncate">{session.user.name || "User"}</div>

@@ -23,8 +23,9 @@ export default function TermsPage() {
 
             <h2 className="text-2xl font-semibold text-[#a78bfa] mb-3">4. Termination of Access</h2>
             <p className="text-gray-400 mb-5">
-                We reserve the right to suspend or terminate accounts that violate these terms, engage in harmful behavior, or compromise the platform's security or integrity.
+                We reserve the right to suspend or terminate accounts that violate these terms, engage in harmful behavior, or compromise the platform&apos;s security or integrity.
             </p>
+
 
             <h2 className="text-2xl font-semibold text-[#a78bfa] mb-3">5. Changes to Terms</h2>
             <p className="text-gray-400 mb-5">
