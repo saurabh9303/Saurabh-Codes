@@ -1,103 +1,112 @@
+'use client'
 import Image from "next/image";
+import Link from "next/link";
+import TypingEffect from "@/components/TypingEffect";
+import SmartLink from "@/components/SmartLink";
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              app/page.js
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <main className="min-h-screen bg-[#1c1f2b] text-[#e5e7eb] flex flex-col items-center justify-center px-4 py-16">
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+      {/* ===== Hero Section ===== */}
+      <section className="flex flex-col-reverse md:flex-row items-center justify-between w-[95vw] max-w-6xl gap-12 bg-gradient-to-br from-[#1f2333] to-[#252a39] backdrop-blur-xl border border-[#3a4157]/50 rounded-3xl p-10 shadow-[0_0_25px_rgba(138,180,248,0.08)] transition-all duration-300 hover:shadow-[0_0_40px_rgba(138,180,248,0.15)]">
+
+        {/* ✨ Left Content */}
+        <div className="flex-1 text-center md:text-left space-y-6">
+          <h1 className="text-2xl md:text-3xl font-extrabold">
+            Welcome to <span className="text-[#38bdf8]">SaurabhCodes</span>
+          </h1>
+
+          {/* ✅ Typing Effect Text */}
+          <p className="text-lg md:text-2xl font-extrabold tracking-tight leading-relaxed min-h-[40px] text-[#a78bfa]">
+            <TypingEffect />
+          </p>
+
+          {/* 🚀 CTA Buttons */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+            <SmartLink
+              href="/projects"
+              className="bg-[#8ab4f8] hover:bg-[#6b9ff5] transition-all duration-300 px-6 py-3 rounded-xl font-semibold text-[#1c1f2b] text-center"
+            >
+              View Projects
+            </SmartLink>
+            <SmartLink
+              href="/contact"
+              className="border border-[#8ab4f8] hover:bg-[#8ab4f8] hover:text-[#1c1f2b] transition-all duration-300 px-6 py-3 rounded-xl font-semibold text-[#8ab4f8] text-center"
+            >
+              Contact Me
+            </SmartLink>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+
+        {/* 📸 Profile Image */}
+        <div className="flex-1 flex justify-center md:justify-end">
+          <div className="relative w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-2 border-[#8ab4f8]/50 hover:scale-105 transition-transform duration-300">
+            <Image
+              src="/images/your-photo.png"
+              alt="Your Photo"
+              fill
+              className="object-cover"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* ===== Skills Section ===== */}
+      <section className="max-w-5xl w-[95vw] mt-20 text-center">
+        <h2 className="text-3xl font-bold mb-12 text-[#8ab4f8]">Services & Expertise</h2>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {[
+            {
+              title: "Web Development",
+              desc: "Responsive, performance-focused websites using Next.js, React, and Tailwind.",
+            },
+            {
+              title: "UI/UX Design",
+              desc: "Elegant, user-centric interfaces with a premium touch and smooth experience.",
+            },
+            {
+              title: "Backend Solutions",
+              desc: "Scalable backend systems & APIs to power modern, reliable applications.",
+            },
+          ].map((item, index) => (
+           <div
+              key={index}
+              className="bg-[#252a39]/70 border border-[#3a4157] p-6 rounded-2xl hover:-translate-y-2 transition-transform duration-300 hover:cursor-pointer"
+            >
+              <h3 className="text-xl font-semibold text-[#a78bfa] mb-3">{item.title}</h3>
+              <p className="text-gray-400">{item.desc}</p>
+            </div>
+          ))}
+        </div>
+
+        {/* Show More Button */}
+        <div className="mt-8">
+          <SmartLink
+            href="/services"
+            className="w-full md:col-span-1 px-20 py-3 bg-[#252a39]/80 border border-[#3a4157] text-[#a78bfa] font-semibold rounded-2xl hover:bg-[#3a4157] hover:text-white hover:scale-105 transition-all duration-300"
+          >
+            Show More →
+          </SmartLink>
+        </div>
+      </section>
+
+
+      <section className="max-w-5xl w-[95vw] mt-20 mb-10">
+        <div className="bg-gradient-to-r from-[#8ab4f8]/20 to-[#a78bfa]/20 border border-[#8ab4f8]/30 rounded-3xl p-10 text-center shadow-[0_0_30px_rgba(138,180,248,0.1)]">
+          <h2 className="text-3xl font-bold mb-4 text-[#8ab4f8]">Ready to Start Your Project?</h2>
+          <p className="text-gray-300 mb-8 text-lg">
+            Let's collaborate and bring your ideas to life with cutting-edge technology and design.
+          </p>
+          <SmartLink
+            href="/contact"
+            className="inline-block bg-[#8ab4f8] hover:bg-[#6b9ff5] transition-all duration-300 px-8 py-4 rounded-xl font-semibold text-[#1c1f2b] text-lg"
+          >
+            Get In Touch
+          </SmartLink>
+        </div>
+      </section>
+    </main>
   );
 }
