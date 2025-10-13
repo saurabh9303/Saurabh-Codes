@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from "react";
+import Image from "next/image";
 
 // Responsive project grid with elegant expandable cards
 export default function ProjectsGrid() {
@@ -81,7 +82,13 @@ export default function ProjectsGrid() {
                 >
                   <div className="cursor-pointer flex items-start gap-6">
                     <div className="w-24 h-20 rounded-lg bg-gray-700 flex-shrink-0 overflow-hidden">
-                      <img src={p.thumb} alt={`${p.title} thumbnail`} className="w-full h-full object-cover" />
+                      <Image
+                        src={p.thumb}
+                        alt={`${p.title} thumbnail`}
+                        width={500}          // or any fixed width you want
+                        height={300}         // or a fixed height; maintains aspect ratio
+                        className="w-full h-full object-cover"
+                      />
                     </div>
                     <div className="flex-1">
                       <h2 className="text-xl font-semibold">{p.title}</h2>
@@ -164,7 +171,13 @@ export default function ProjectsGrid() {
 
                     {/* Right - Screenshot */}
                     <div className="rounded-xl overflow-hidden bg-gray-800/40 ring-1 ring-gray-700 flex items-center justify-center h-80">
-                      <img src={p.screenshot} alt={`${p.title} screenshot`} className="w-full h-full object-cover" />
+                      <Image
+                        src={p.screenshot}
+                        alt={`${p.title} screenshot`}
+                        width={800}          // choose appropriate width
+                        height={450}         // choose appropriate height to keep aspect ratio
+                        className="w-full h-full object-cover"
+                      />
                     </div>
                   </div>
                 </div>
