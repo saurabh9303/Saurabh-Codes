@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { signIn } from "next-auth/react";
+import Image from "next/image";
 
 // 🔹 Reusable OAuth Button Component
 const OAuthButton = ({ provider, icon, children, loading, onClick, disabled }) => (
@@ -16,7 +17,13 @@ const OAuthButton = ({ provider, icon, children, loading, onClick, disabled }) =
     >
         {/* Left Icon */}
         {!loading ? (
-            <img src={icon} alt={`${provider} icon`} className="w-5 h-5" />
+            <Image
+                src={icon}
+                alt={`${provider} icon`}
+                width={20}      // matches w-5
+                height={20}     // matches h-5
+                className="w-5 h-5"
+            />
         ) : (
             <div className="w-5 h-5 border-2 border-t-transparent border-white rounded-full animate-spin"></div>
         )}
