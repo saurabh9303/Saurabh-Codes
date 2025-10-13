@@ -97,7 +97,7 @@ export default function Home() {
         <div className="bg-gradient-to-r from-[#8ab4f8]/20 to-[#a78bfa]/20 border border-[#8ab4f8]/30 rounded-3xl p-10 text-center shadow-[0_0_30px_rgba(138,180,248,0.1)]">
           <h2 className="text-3xl font-bold mb-4 text-[#8ab4f8]">Ready to Start Your Project?</h2>
           <p className="text-gray-300 mb-8 text-lg">
-            Let's collaborate and bring your ideas to life with cutting-edge technology and design.
+            Let&apos;s collaborate and bring your ideas to life with cutting-edge technology and design.
           </p>
           <SmartLink
             href="/contact"

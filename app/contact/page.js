@@ -79,7 +79,7 @@ export default function ContactPageOptimized() {
             Contact Me
           </h1>
           <p className="mt-3 text-gray-300 max-w-2xl mx-auto text-sm md:text-base">
-            I’m always open to discussing new projects or collaborations. Send a message, and I’ll get back to you within 1–2 days..
+            I&apos;m always open to discussing new projects or collaborations. Send a message, and I&apos;ll get back to you within 1–2 days..
           </p>
         </div>
       </section>
@@ -102,7 +102,7 @@ export default function ContactPageOptimized() {
                 Contact Form
               </h2>
               <p className="text-sm text-gray-300 mt-1">
-                Share a few details and we’ll reply with next steps.
+                Share a few details and we&apos;ll reply with next steps.
               </p>
 
 
@@ -180,7 +180,7 @@ export default function ContactPageOptimized() {
                 )}
                 {success && (
                   <div className="mt-3 p-3 rounded-lg bg-green-600/80 text-white text-sm sm:text-base">
-                    ✅ Successfully submitted — we’ll contact you soon.
+                    ✅ Successfully submitted — we&apos;ll contact you soon.
                   </div>
                 )}
               </form>

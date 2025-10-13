@@ -41,7 +41,7 @@ export default function PortfolioPage() {
     { name: 'MongoDB', icon: '/icons/mongodb.png' },
     { name: 'MySQL', icon: '/icons/mysql.png' },
     { name: 'Tailwind', icon: '/icons/tailwind.png' },
-    {name:'Bootstrap', icon:'/icons/bootstrap.png'},
+    { name: 'Bootstrap', icon: '/icons/bootstrap.png' },
     { name: 'Git', icon: '/icons/git.png' },
     { name: 'GitHub', icon: '/icons/github.png' }
   ];
@@ -146,7 +146,7 @@ export default function PortfolioPage() {
               </div>
 
               <div className="flex gap-3 text-xs sm:text-sm text-slate-500 dark:text-slate-400 flex-wrap">
-                <div>🇮🇳 Based in India</div>
+                <div>In Based in India</div>
                 <div className='font-extrabold text-green-500'>•</div>
                 <div>Available for remote</div>
               </div>
@@ -181,7 +181,7 @@ export default function PortfolioPage() {
         {/* FEATURED PROJECTS */}
         <section id="projects" className="mt-12 sm:mt-16">
           <h2 className="text-xl sm:text-2xl font-bold">Featured Projects</h2>
-          <p className="mt-2 text-xs sm:text-sm text-slate-600 dark:text-slate-400 max-w-2xl">Browse projects showcasing UI design and backend architecture — click ‘View Project’ for details.</p>
+          <p className="mt-2 text-xs sm:text-sm text-slate-600 dark:text-slate-400 max-w-2xl">Browse projects showcasing UI design and backend architecture — click &apos;View Project&apos; for details.</p>
 
           <div className="mt-4 sm:mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             {featured.map((p) => (
@@ -276,7 +276,9 @@ export default function PortfolioPage() {
         <section id="contact" className="mt-12 sm:mt-16 mb-12 sm:mb-20 grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
           <div>
             <h2 className="text-xl sm:text-2xl font-bold">Get in touch</h2>
-            <p className="mt-3 text-sm sm:text-base text-slate-600 dark:text-slate-300">Have a project or want to say hi? Send a short message and I'll reply.</p>
+            <p className="mt-3 text-sm sm:text-base text-slate-600 dark:text-slate-300">
+              Have a project or want to say hi? Send a short message and I&apos;ll reply.
+            </p>
 
             <form
               onSubmit={handleSubmit}

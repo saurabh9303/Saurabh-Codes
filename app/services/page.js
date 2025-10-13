@@ -132,7 +132,7 @@ export default function ServicesOptimized() {
       }
 
       setSubmitted(true);
-      setSuccess("✅ submitted - we’ll contact you soon.");
+      setSuccess("✅ submitted - we&apos;ll contact you soon.");
       setSubmitting(false);
 
       setTimeout(() => {
@@ -169,7 +169,7 @@ export default function ServicesOptimized() {
           role="alert"
           className="text-sm mb-5 text-yellow-800 bg-yellow-50 border-l-4 border-yellow-200 px-4 py-2 rounded-md"
         >
-          💡 Tip: Click on “Details” for any service to view full info and submit your request. We’ll get back to you within 1–2 working days!
+          💡 Tip: Click on “Details” for any service to view full info and submit your request. We&apos;ll get back to you within 1–2 working days!
         </p>
         <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {SERVICES.map(s => {

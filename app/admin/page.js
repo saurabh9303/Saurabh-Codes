@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from "react";
 import { useSession, signIn } from "next-auth/react";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
 
 // Add animations CSS
 const styles = `
@@ -458,10 +459,12 @@ export default function AdminDashboard() {
                               {/* Profile Image */}
                               <td className="px-4 py-4">
                                 {u.image ? (
-                                  <img
+                                  <Image
                                     src={u.image}
                                     alt={u.name}
-                                    className="w-10 h-10 rounded-full object-cover border border-gray-600"
+                                    width={40}        // w-10 = 2.5rem = 40px
+                                    height={40}       // h-10 = 2.5rem = 40px
+                                    className="rounded-full object-cover border border-gray-600"
                                   />
                                 ) : (
                                   <div className="w-10 h-10 rounded-full bg-gray-600 flex items-center justify-center text-gray-200">
@@ -573,10 +576,12 @@ export default function AdminDashboard() {
                           <div className="flex items-center gap-3 flex-1 min-w-0">
                             {/* Profile Image */}
                             {u.image ? (
-                              <img
+                              <Image
                                 src={u.image}
                                 alt={u.name}
-                                className="w-12 h-12 rounded-full object-cover border border-gray-600"
+                                width={48}          // w-12 = 3rem = 48px
+                                height={48}         // h-12 = 3rem = 48px
+                                className="rounded-full object-cover border border-gray-600"
                               />
                             ) : (
                               <div className="w-12 h-12 rounded-full bg-gray-600 flex items-center justify-center text-gray-200">
@@ -597,8 +602,8 @@ export default function AdminDashboard() {
                             </span>
                             <span
                               className={`px-2 py-1 rounded-md text-xs font-semibold h-fit ${u.status === "active"
-                                  ? "bg-green-600/30 text-green-300"
-                                  : "bg-red-600/30 text-red-300"
+                                ? "bg-green-600/30 text-green-300"
+                                : "bg-red-600/30 text-red-300"
                                 }`}
                             >
                               {u.status}

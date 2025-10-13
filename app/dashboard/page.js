@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { useSession, signOut } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import SmartLink from "@/components/SmartLink";
+import Image from "next/image";
 
 export default function DashboardClient() {
     const { data: session, status } = useSession();
@@ -231,10 +232,12 @@ export default function DashboardClient() {
                     <div className="bg-gradient-to-r from-gray-700 to-gray-900 p-4">
                         <div className="flex items-center gap-4">
                             {userData.image ? (
-                                <img
+                                <Image
                                     src={userData.image}
                                     alt={userData.name}
-                                    className="w-16 h-16 rounded-full border-4 border-white/20 object-cover shadow-xl"
+                                    width={64}    // px में specify करें
+                                    height={64}   // px में specify करें
+                                    className="rounded-full border-4 border-white/20 object-cover shadow-xl"
                                 />
                             ) : (
                                 <div className="w-16 h-16 rounded-full bg-white/10 backdrop-blur-sm border-4 border-white/20 flex items-center justify-center text-2xl font-bold text-white shadow-xl">
