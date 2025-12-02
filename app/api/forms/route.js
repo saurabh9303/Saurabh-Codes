@@ -97,22 +97,39 @@ export async function POST(req) {
         );
     }
 }
+export async function GET(req) {
+    try {
+        const session = await getServerSession(authOptions);
 
-export async function GET() {
-    const session = await getServerSession(authOptions);
+        if (!session || session.user.role !== "admin") {
+            return NextResponse.json(
+                { success: false, error: "Unauthorized" },
+                { status: 403 }
+            );
+        }
 
-    if (!session) {
+        await connectDB();
+
+        const forms = await FormSubmission.find()
+            .sort({ createdAt: -1 })
+            .select("-__v");
+
         return NextResponse.json(
-            { success: false, error: "Unauthorized" },
-            { status: 401 }
+            { success: true, forms },
+            { status: 200 }
+        );
+
+    } catch (err) {
+        console.error("❌ GET /forms error:", err);
+        
+        return NextResponse.json(
+            { success: false, error: "Failed to fetch forms" },
+            { status: 500 }
         );
     }
-
-    await connectDB();
-    const forms = await FormSubmission.find().sort({ createdAt: -1 });
-
-    return NextResponse.json({ success: true, forms }, { status: 200 });
 }
+
+
 
 
 
@@ -121,10 +138,12 @@ export async function DELETE(req) {
 
     try {
         const session = await getServerSession(authOptions);
-        if (!session) {
+
+        // 🔒 Admin-only protection
+        if (!session || session.user.role !== "admin") {
             return NextResponse.json(
-                { success: false, error: "You must be logged in to delete a form." },
-                { status: 401 }
+                { success: false, error: "Only admin can delete a form." },
+                { status: 403 }
             );
         }
 
