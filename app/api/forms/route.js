@@ -99,15 +99,21 @@ export async function POST(req) {
 }
 
 export async function GET() {
-    try {
-        await connectDB();
-        const forms = await FormSubmission.find().sort({ createdAt: -1 });
-        return new Response(JSON.stringify({ forms }), { status: 200 });
-    } catch (err) {
-        console.error(err);
-        return new Response(JSON.stringify({ forms: [] }), { status: 500 });
+    const session = await getServerSession(authOptions);
+
+    if (!session) {
+        return NextResponse.json(
+            { success: false, error: "Unauthorized" },
+            { status: 401 }
+        );
     }
+
+    await connectDB();
+    const forms = await FormSubmission.find().sort({ createdAt: -1 });
+
+    return NextResponse.json({ success: true, forms }, { status: 200 });
 }
+
 
 
 export async function DELETE(req) {

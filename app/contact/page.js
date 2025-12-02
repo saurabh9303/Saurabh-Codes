@@ -267,7 +267,7 @@ export default function ContactPageOptimized() {
             <div className="rounded-2xl overflow-hidden border border-white/10">
               <iframe
                 title="office-map"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26807.52887120159!2d80.81820805699846!3d24.59727091499891!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39847f12a0d55141%3A0xa6208334386e35e2!2sSatna%2C%20Madhya%20Pradesh!5e1!3m2!1sen!2sin!4v1760158684459!5m2!1sen!2sin"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d191053.86649614977!2d80.70130894867343!3d24.602822588671547!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39847f12a0d55141%3A0xa6208334386e35e2!2sSatna%2C%20Madhya%20Pradesh!5e1!3m2!1sen!2sin!4v1763787645936!5m2!1sen!2sin"
                 width="100%"
                 height="250"
                 style={{ border: 0 }}
