@@ -26,15 +26,22 @@ export default function ProjectsGrid() {
     },
     {
       id: 2,
-      title: "Analytics Dashboard",
-      short: "Real-time analytics dashboard with customizable charts and alerts.",
-      tech: ["React", "Recharts", "Node.js", "Postgres"],
-      features: ["Customizable widgets", "Real-time websocket updates", "Role-based access", "CSV export"],
-      thumb: "/project-thumb-2.jpg",
-      screenshot: "/project-ss-2.jpg",
-      live: "https://example-live-2.com",
-      source: "https://github.com/your/repo-2",
+      title: "Cyber cafe Management System",
+      short: "A comprehensive Next.js application to manage cyber cafe operations efficiently, including user management, session tracking, and billing.",
+      tech: ["Next.js", "NextAuth", "MongoDB", "Tailwind CSS", "Node.js"],
+      features: [
+        "User authentication with Google OAuth",
+        "Admin dashboard for monitoring users and sessions",
+        "Form submission and record keeping",
+        "Real-time billing and print management",
+        "Responsive and mobile-friendly interface"
+      ],
+      thumb: "/cyber-cafe-thumb.jpg",       // Thumbnail image of project
+      screenshot: "/cyber-cafe-ss.jpg",     // Detailed screenshot
+      live: "https://saurabh-cafe-one.vercel.app/",  // Deployed live demo
+      source: "https://github.com/saurabh9303/cyber-cafe", // GitHub repo link
     },
+
     {
       id: 3,
       title: "E‑commerce Platform",
