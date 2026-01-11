@@ -23,7 +23,7 @@ export default function PortfolioPage() {
   }, []);
 
   const featured = [
-    { title: 'Chitrakoot Tourism Website', subtitle: 'Journey through Nature, Myth & Devotion', tags: ['React.js', 'Node.js', 'Express.js', 'MongoDB', 'Tailwind CSS', 'Bootstrap' ], link: 'https://chitrakoot-tourism-awl4.onrender.com/' },
+    { title: 'Chitrakoot Tourism Website', subtitle: 'Journey through Nature, Myth & Devotion', tags: ['React.js', 'Node.js', 'Express.js', 'MongoDB', 'Tailwind CSS', 'Bootstrap'], link: 'https://chitrakoot-tourism-awl4.onrender.com/' },
     { title: 'Cyber Cafe Management System', subtitle: 'Designed and developed a full-stack Cyber Cafe Management System to manage digital services and customer operations.', tags: ['Next.js', 'Node.js', 'Tailwind CSS', 'MongoDB'], link: 'https://saurabh-cafe-one.vercel.app/' },
     { title: 'Jewelry Shop Management System', subtitle: 'Designed and developed a Jewelry Shop Management System to manage products, sales, customers, and billing operations.', tags: ['Next.js', 'Node.js', 'Razorpay', 'Tailwind CSS', 'MongoDB'], link: 'https://github.com/saurabh9303/Jewellery-shop' }
   ];
@@ -364,18 +364,54 @@ export default function PortfolioPage() {
             </form>
           </div>
 
-          <aside className="bg-white/60 dark:bg-[#041427]/60 rounded-2xl p-4 sm:p-6 border border-slate-200/8 dark:border-slate-800/40">
-            <div className="text-sm sm:text-base font-semibold">Other ways to reach</div>
-            <div className="mt-4 text-xs sm:text-sm text-slate-700 dark:text-slate-300 space-y-3 break-words">
-              <div>📧 kumarsaurabh09546@gmail.com</div>
-              <div>💬 Telegram: @saurabhkumar</div>
-            </div>
+          <aside className="flex h-full flex-col justify-between rounded-xl border border-slate-200/20 dark:border-slate-800/40 bg-white dark:bg-[#041427] p-5 sm:p-6">
+            {/* Top Content */}
+            <div>
+              <h3 className="text-sm sm:text-base font-semibold text-slate-900 dark:text-slate-100">
+                Contact
+              </h3>
 
-            <div className="mt-6 flex flex-col sm:flex-row gap-3">
-              <a className="flex-1 text-center text-sm rounded-md px-3 sm:px-4 py-2 border border-slate-200/8 dark:border-slate-800/40 cursor-pointer">Resume</a>
-              <a className="flex-1 text-center text-sm rounded-md px-3 sm:px-4 py-2 border border-slate-200/8 dark:border-slate-800/40 cursor-pointer">Portfolio PDF</a>
+              <div className="mt-5 space-y-4 text-xs sm:text-sm text-slate-600 dark:text-slate-300">
+                <div>
+                  <span className="block text-slate-500 dark:text-slate-400">
+                    Email
+                  </span>
+                  <a
+                    href="mailto:kumarsaurabh09546@gmail.com"
+                    className="font-medium hover:underline"
+                  >
+                    kumarsaurabh09546@gmail.com
+                  </a>
+                </div>
+
+                <div>
+                  <span className="block text-slate-500 dark:text-slate-400">
+                    Location
+                  </span>
+                  <span className="font-medium">
+                    Satna, Madhya Pradesh, India
+                  </span>
+                </div>
+              </div>
+              <div className="my-6 h-px bg-slate-200 dark:bg-slate-800" />
+              <p className="text-xs sm:text-sm text-slate-500 dark:text-slate-400 leading-relaxed">
+                Open to full-time roles, internships, and freelance opportunities in
+                full-stack web development.
+              </p>
+            </div>
+            <div className="pt-6">
+              <a
+                href="/resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="relative inline-flex w-full items-center justify-center rounded-md px-5 py-2.5 text-sm font-semibold text-white bg-white dark:text-black shadow-md overflow-hidden transition hover:scale-105 hover:shadow-2xl animate-pulse hover:bg-blue-200"
+              >
+                View Resume
+              </a>
+
             </div>
           </aside>
+
         </section>
       </main>
 
