@@ -23,9 +23,9 @@ export default function PortfolioPage() {
   }, []);
 
   const featured = [
-    { title: 'Chitrakoot Tourism Website', subtitle: 'Journey through Nature, Myth & Devotion', tags: ['Design', 'React', 'Tailwind'], link: 'https://chitrakoot-tourism-awl4.onrender.com/' },
-    { title: 'Socket-based realtime messaging platform - (WhatsApp Inspired)', subtitle: 'Coming Soon....', tags: ['    ', ' ', '  '], link: '#' },
-    { title: 'Fast checkout and offline-first UX - E-Commerce PWA', subtitle: 'Coming Soon....', tags: ['    ', '   ', '  '], link: '#' }
+    { title: 'Chitrakoot Tourism Website', subtitle: 'Journey through Nature, Myth & Devotion', tags: ['React.js', 'Node.js', 'Express.js', 'MongoDB', 'Tailwind CSS', 'Bootstrap' ], link: 'https://chitrakoot-tourism-awl4.onrender.com/' },
+    { title: 'Cyber Cafe Management System', subtitle: 'Designed and developed a full-stack Cyber Cafe Management System to manage digital services and customer operations.', tags: ['Next.js', 'Node.js', 'Tailwind CSS', 'MongoDB'], link: 'https://saurabh-cafe-one.vercel.app/' },
+    { title: 'Jewelry Shop Management System', subtitle: 'Designed and developed a Jewelry Shop Management System to manage products, sales, customers, and billing operations.', tags: ['Next.js', 'Node.js', 'Razorpay', 'Tailwind CSS', 'MongoDB'], link: 'https://github.com/saurabh9303/Jewellery-shop' }
   ];
 
   const skills = [
@@ -121,7 +121,7 @@ export default function PortfolioPage() {
           <div className="lg:col-span-7">
             <p className="text-xs sm:text-sm uppercase tracking-wider text-slate-500 dark:text-slate-400">Full-stack & Product-focused</p>
             <h1 className="mt-3 sm:mt-4 text-xl sm:text-2xl md:text-3xl lg:text-5xl font-extrabold leading-tight break-words">
-              I craft modern products —
+              I craft modern, scalable web applications -
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#06b6d4] via-[#7c3aed] to-[#f472b6]">
                 from UI to APIs
               </span>

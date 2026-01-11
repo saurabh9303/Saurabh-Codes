@@ -31,10 +31,10 @@ export default function Home() {
               View Projects
             </SmartLink>
             <SmartLink
-              href="/contact"
+              href="/portfolio"
               className="border border-[#8ab4f8] hover:bg-[#8ab4f8] hover:text-[#1c1f2b] transition-all duration-300 px-6 py-3 rounded-xl font-semibold text-[#8ab4f8] text-center"
             >
-              Contact Me
+              Portfolio
             </SmartLink>
           </div>
         </div>

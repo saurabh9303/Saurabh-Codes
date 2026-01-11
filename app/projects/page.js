@@ -36,23 +36,30 @@ export default function ProjectsGrid() {
         "Real-time billing and print management",
         "Responsive and mobile-friendly interface"
       ],
-      thumb: "/cyber-cafe-thumb.jpg",       // Thumbnail image of project
-      screenshot: "/cyber-cafe-ss.jpg",     // Detailed screenshot
-      live: "https://saurabh-cafe-one.vercel.app/",  // Deployed live demo
-      source: "https://github.com/saurabh9303/cyber-cafe", // GitHub repo link
+      thumb: "/cyber-cafe-thumb.jpg",
+      screenshot: "/cyber-cafe-ss.jpg",
+      live: "https://saurabh-cafe-one.vercel.app/",
+      source: "https://github.com/saurabh9303/cyber-cafe",
     },
 
     {
       id: 3,
-      title: "E‑commerce Platform",
-      short: "Headless e‑commerce with composable checkout and PWA support.",
-      tech: ["Next.js", "Commerce.js", "Stripe", "MongoDB"],
-      features: ["Headless CMS integration", "Fast SSR pages", "PWA with offline support", "A/B testing setup"],
-      thumb: "/project-thumb-3.jpg",
-      screenshot: "/project-ss-3.jpg",
-      live: "https://example-live-3.com",
-      source: "https://github.com/your/repo-3",
-    },
+      title: "Jewelry Shop Management System",
+      short: "A full-stack e-commerce application for managing jewelry products, orders, and secure online payments with role-based access.",
+      tech: ["Next.js", "NextAuth", "MongoDB", "Tailwind CSS", "Node.js", "Razorpay"],
+      features: [
+        "User authentication using NextAuth",
+        "Product browsing, add-to-cart, and order placement",
+        "Online payments via Razorpay and Cash on Delivery option",
+        "Order cancellation and order history for users",
+        "Role-based admin dashboard to manage users, products, and orders"
+      ],
+      thumb: "/jewelry-shop-thumb.jpg",
+      screenshot: "/jewelry-shop-ss.jpg",
+      live: "https://your-jewelry-project.vercel.app/",
+      source: "https://github.com/saurabh9303/Jewellery-shop"
+    }
+
   ];
 
   return (
