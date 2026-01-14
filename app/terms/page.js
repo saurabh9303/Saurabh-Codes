@@ -1,6 +1,6 @@
 export default function TermsPage() {
     return (
-        <div className="max-w-4xl mx-auto py-20 px-6 text-gray-200">
+        <div className="max-w-4xl mx-auto py-20 px-6 border m-1 border-slate-500 rounded-xl text-gray-200">
             <h1 className="text-4xl font-bold text-[#8ab4f8] mb-6">Terms of Service</h1>
             <p className="text-gray-400 mb-6">
                 Welcome to SaurabhCodes. By accessing or using this website, creating an account, reading blogs, or submitting any form, you agree to comply with these Terms of Service.

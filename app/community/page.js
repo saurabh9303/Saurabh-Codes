@@ -1,6 +1,6 @@
 export default function CommunityPage() {
     return (
-        <div className="max-w-4xl mx-auto py-20 px-6 text-gray-200">
+        <div className="max-w-4xl mx-auto py-20 px-6 border m-1 border-slate-500 rounded-xl text-gray-200">
             <h1 className="text-4xl font-bold text-[#8ab4f8] mb-6">Community Guidelines – SaurabhCodes</h1>
             <p className="text-gray-400 mb-6">
                 SaurabhCodes is a space for learning, collaboration, and professional growth. To maintain a safe and inclusive environment, all members are expected to follow these community principles.

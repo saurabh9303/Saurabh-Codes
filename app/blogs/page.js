@@ -36,7 +36,7 @@ export default function Blogs() {
   ];
 
   return (
-    <main className="min-h-screen bg-[#1c1f2b] text-[#e5e7eb] px-4 py-20 flex flex-col items-center">
+    <main className="min-h-screen from-slate-900 via-slate-800 to-slate-900 overflow-x-hidden border m-1 border-slate-500 rounded-xl text-[#e5e7eb] px-4 py-20 flex flex-col items-center">
       {/* ===== Header ===== */}
       <div className="text-center max-w-3xl mb-16 space-y-4">
         <h1 className="text-4xl md:text-5xl font-extrabold">
@@ -51,7 +51,7 @@ export default function Blogs() {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 w-[95vw] max-w-7xl">
         {posts.map((post) => (
           <SmartLink key={post.id} href={`/blogs/${post.slug}`} className="group">
-            <div className="bg-[#252a39]/70 backdrop-blur-xl border border-[#3a4157] rounded-2xl overflow-hidden shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-[#3a4157]/40 flex flex-col h-full">
+            <div className="bg-[#252a39]/70 backdrop-blur-xl  border border-slate-500 rounded-2xl overflow-hidden shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-[#3a4157]/40 flex flex-col h-full">
               {/* 🖼 Blog Image */}
               <div className="relative w-full h-56">
                 <Image

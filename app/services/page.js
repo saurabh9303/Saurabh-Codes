@@ -155,7 +155,7 @@ export default function ServicesOptimized() {
   };
 
   return (
-    <main className="bg-gradient-to-b from-[#061228] to-[#000815] text-white min-h-screen">
+    <main className="from-slate-900 via-slate-800 to-slate-900 overflow-x-hidden border m-1 border-slate-500 rounded-xl text-white min-h-screen">
       {/* HERO */}
       <section className="pt-16 pb-6 px-6 md:px-12 lg:px-24 text-center">
         <h1 className="text-3xl md:text-4xl font-extrabold tracking-tight text-[#a78bfa]">Services</h1>
@@ -177,8 +177,8 @@ export default function ServicesOptimized() {
             const isFormOpen = activeFormId === s.id;
 
             return (
-              <article key={s.id} className={`relative rounded-2xl overflow-hidden border border-white/7 bg-white/4 backdrop-blur-md shadow-lg transition-transform duration-300 ${isOpen ? "scale-[1.01] ring-2 ring-indigo-500/20" : "hover:-translate-y-1"}`}>
-                <div className="p-5">
+              <article key={s.id} className={`relative   border-slate-500 rounded-2xl overflow-hidden border bg-white/4 backdrop-blur-md shadow-lg transition-transform duration-300 ${isOpen ? "scale-[1.01] ring-2 ring-indigo-500/20" : "hover:-translate-y-1"}`}>
+                <div className="p-5 ">
                   <div className="flex items-start gap-4">
                     <div className="flex-none text-indigo-200/90">
                       <svg className="w-7 h-7" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">

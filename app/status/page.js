@@ -1,6 +1,6 @@
 export default function StatusPage() {
     return (
-        <div className="max-w-4xl mx-auto py-20 px-6 text-gray-200">
+        <div className="max-w-4xl mx-auto py-20 px-6 border m-1 border-slate-500 rounded-xl text-gray-200">
             <h1 className="text-4xl font-bold text-[#8ab4f8] mb-6">System Status – SaurabhCodes</h1>
             <p className="text-gray-400 mb-6">
                 Monitor the health and uptime of <span className="font-semibold">SaurabhCodes</span> services in real time. Stay informed about website, blogs, authentication, and API status.

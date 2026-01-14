@@ -65,13 +65,13 @@ export default function LoginPage() {
     const isAnyLoading = loadingProvider !== null;
 
     return (
-        <main className="min-h-screen flex items-center justify-center bg-[#0f172a] px-4 py-10 text-[#e5e7eb] relative overflow-hidden">
+        <main className="min-h-screen flex items-center justify-center from-slate-900 via-slate-800 to-slate-900 overflow-x-hidden border m-1 border-slate-500 rounded-xl px-4 py-10 text-[#e5e7eb] relative overflow-hidden">
             {/* 🌌 Subtle background glow */}
             <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-slate-900/70 to-black"></div>
             <div className="absolute top-1/3 left-1/3 w-[400px] h-[400px] bg-blue-500/20 blur-[150px] rounded-full"></div>
 
             {/* 🪄 Main card */}
-            <div className="relative w-full max-w-md bg-gradient-to-br from-[#1f2333] to-[#252a39] border border-[#3a4157]/50 backdrop-blur-xl rounded-3xl shadow-[0_0_35px_rgba(138,180,248,0.08)] p-8 md:p-10 space-y-8 animate-fadeIn">
+            <div className="relative w-full max-w-md bg-gradient-to-br from-[#1f2333] to-[#252a39] border border-slate-500 backdrop-blur-xl rounded-3xl shadow-[0_0_35px_rgba(138,180,248,0.08)] p-8 md:p-10 space-y-8 animate-fadeIn">
                 {/* Title */}
                 <div className="text-center space-y-2">
                     <h1 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#a78bfa] to-[#8ab4f8]">
@@ -120,13 +120,13 @@ export default function LoginPage() {
                 {/* Footer */}
                 <p className="text-center text-xs text-gray-500 pt-2">
                     By continuing, you agree to our{" "}
-                    <span className="text-[#8ab4f8] hover:underline cursor-pointer">
+                    <a href="/terms" className="text-[#8ab4f8] hover:underline cursor-pointer">
                         Terms
-                    </span>{" "}
+                    </a>{" "}
                     &{" "}
-                    <span className="text-[#8ab4f8] hover:underline cursor-pointer">
+                    <a href="/privacy" className="text-[#8ab4f8] hover:underline cursor-pointer">
                         Privacy Policy
-                    </span>.
+                    </a>.
                 </p>
             </div>
         </main>

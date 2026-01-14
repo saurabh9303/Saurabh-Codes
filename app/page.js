@@ -6,15 +6,15 @@ import SmartLink from "@/components/SmartLink";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-[#1c1f2b] text-[#e5e7eb] flex flex-col items-center justify-center px-4 py-16">
+    <main className="min-h-screen from-slate-900 via-slate-800 to-slate-900 overflow-x-hidden border m-1 border-slate-500 rounded-xl text-[#e5e7eb] flex flex-col items-center justify-center px-4 py-16">
 
       {/* ===== Hero Section ===== */}
-      <section className="flex flex-col-reverse md:flex-row items-center justify-between w-[95vw] max-w-6xl gap-12 bg-gradient-to-br from-[#1f2333] to-[#252a39] backdrop-blur-xl border border-[#3a4157]/50 rounded-3xl p-10 shadow-[0_0_25px_rgba(138,180,248,0.08)] transition-all duration-300 hover:shadow-[0_0_40px_rgba(138,180,248,0.15)]">
+      <section className="flex flex-col-reverse md:flex-row items-center justify-between w-[95vw] max-w-6xl gap-12 bg-gradient-to-br from-[#1f2333] to-[#252a39] backdrop-blur-xl border border-slate-500 rounded-3xl p-10 shadow-[0_0_25px_rgba(138,180,248,0.08)] transition-all duration-300 hover:shadow-[0_0_40px_rgba(138,180,248,0.15)]">
 
         {/* ✨ Left Content */}
         <div className="flex-1 text-center md:text-left space-y-6">
           <h1 className="text-2xl md:text-3xl font-extrabold">
-            Welcome to <span className="text-[#38bdf8]">SaurabhCodes</span>
+            Welcome to <span className="text-[#38bdf8]">My Website</span>
           </h1>
 
           {/* ✅ Typing Effect Text */}
@@ -73,7 +73,7 @@ export default function Home() {
           ].map((item, index) => (
            <div
               key={index}
-              className="bg-[#252a39]/70 border border-[#3a4157] p-6 rounded-2xl hover:-translate-y-2 transition-transform duration-300 hover:cursor-pointer"
+              className="bg-[#252a39]/70 border border-slate-500 p-6 rounded-2xl hover:-translate-y-2 transition-transform duration-300 hover:cursor-pointer"
             >
               <h3 className="text-xl font-semibold text-[#a78bfa] mb-3">{item.title}</h3>
               <p className="text-gray-400">{item.desc}</p>
@@ -85,7 +85,7 @@ export default function Home() {
         <div className="mt-8">
           <SmartLink
             href="/services"
-            className="w-full md:col-span-1 px-20 py-3 bg-[#252a39]/80 border border-[#3a4157] text-[#a78bfa] font-semibold rounded-2xl hover:bg-[#3a4157] hover:text-white hover:scale-105 transition-all duration-300"
+            className="w-full md:col-span-1 px-20 py-3 bg-[#252a39]/80 border border-slate-500 text-[#a78bfa] font-semibold rounded-2xl hover:bg-[#3a4157] hover:text-white hover:scale-105 transition-all duration-300"
           >
             Show More →
           </SmartLink>
@@ -94,7 +94,7 @@ export default function Home() {
 
 
       <section className="max-w-5xl w-[95vw] mt-20 mb-10">
-        <div className="bg-gradient-to-r from-[#8ab4f8]/20 to-[#a78bfa]/20 border border-[#8ab4f8]/30 rounded-3xl p-10 text-center shadow-[0_0_30px_rgba(138,180,248,0.1)]">
+        <div className="bg-gradient-to-r from-[#8ab4f8]/20 to-[#a78bfa]/20 border border-slate-500 rounded-3xl p-10 text-center shadow-[0_0_30px_rgba(138,180,248,0.1)]">
           <h2 className="text-3xl font-bold mb-4 text-[#8ab4f8]">Ready to Start Your Project?</h2>
           <p className="text-gray-300 mb-8 text-lg">
             Let&apos;s collaborate and bring your ideas to life with cutting-edge technology and design.

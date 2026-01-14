@@ -559,14 +559,14 @@ export default function BlogDetail() {
     }
 
     return (
-        <main className="min-h-screen bg-[#1c1f2b] text-[#e5e7eb] px-4 py-10 sm:py-16 flex flex-col items-center">
+        <main className="min-h-screen from-slate-900 via-slate-800 to-slate-900 overflow-x-hidden border m-1 border-slate-500 rounded-xl text-[#e5e7eb] px-4 py-10 sm:py-16 flex flex-col items-center">
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#8ab4f8] mb-10 text-center">
                 {blog.title}
             </h1>
 
-            <div className="w-full max-w-7xl bg-[#252a39]/70 backdrop-blur-xl border border-[#3a4157] rounded-3xl shadow-lg flex flex-col md:flex-row overflow-hidden h-[80vh] md:h-[85vh] lg:h-[90vh]">
+            <div className="w-full max-w-7xl bg-[#252a39]/70 backdrop-blur-xl  border border-slate-500 rounded-3xl shadow-lg flex flex-col md:flex-row overflow-hidden h-[80vh] md:h-[85vh] lg:h-[90vh]">
                 {/* Sidebar */}
-                <aside className="w-full md:w-1/3 lg:w-1/4 border-b md:border-b-0 md:border-r border-[#3a4157] p-5 sm:p-6 overflow-y-auto max-h-60 md:max-h-full">
+                <aside className="w-full md:w-1/3 lg:w-1/4 border-b md:border-b-0 md:border-r border-slate-500 p-5 sm:p-6 overflow-y-auto max-h-60 md:max-h-full">
                     <h2 className="text-xl sm:text-2xl font-bold text-[#8ab4f8] mb-4 sm:mb-6">Contents</h2>
                     <ul className="space-y-2 sm:space-y-3">
                         {blog.sections.map((sec, i) => (

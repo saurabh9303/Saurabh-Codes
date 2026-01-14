@@ -38,7 +38,7 @@ export default function ResponsiveNav() {
                 {/* Logo/Brand with Animation */}
                 <SmartLink href="/" className="text-xl font-bold text-white hover:text-[#38bdf8] transition-all duration-500 transform hover:scale-105 animate-fade-in">
                     <span className="bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent hover:from-[#38bdf8] hover:to-[#0ea5e9] transition-all duration-500">
-                        &lt;SaurabhCodes/&gt;
+                        &lt;Saurabh&gt;
                     </span>
                 </SmartLink>
 

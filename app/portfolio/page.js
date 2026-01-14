@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import Image from "next/image";
 import { useSession } from "next-auth/react";
+import Link from 'next/link';
 
 export default function PortfolioPage() {
   const { data: session, status } = useSession();
@@ -29,21 +30,21 @@ export default function PortfolioPage() {
   ];
 
   const skills = [
-    { name: 'HTML', icon: '/icons/html.png' },
-    { name: 'CSS', icon: '/icons/css.png' },
-    { name: 'JavaScript', icon: '/icons/javascript.png' },
-    { name: 'TypeScript', icon: '/icons/typescript.png' },
-    { name: 'React', icon: '/icons/react.png' },
-    { name: 'Next.js', icon: '/icons/nextjs.png' },
-    { name: 'Node.js', icon: '/icons/nodejs.png' },
-    { name: 'Express', icon: '/icons/express.png' },
-    { name: 'NestJS', icon: '/icons/nestjs.png' },
-    { name: 'MongoDB', icon: '/icons/mongodb.png' },
-    { name: 'MySQL', icon: '/icons/mysql.png' },
-    { name: 'Tailwind', icon: '/icons/tailwind.png' },
-    { name: 'Bootstrap', icon: '/icons/bootstrap.png' },
-    { name: 'Git', icon: '/icons/git.png' },
-    { name: 'GitHub', icon: '/icons/github.png' }
+    { name: 'HTML', icon: '/icons/html.png',link:"https://developer.mozilla.org/en-US/docs/Web/HTML" },
+    { name: 'CSS', icon: '/icons/css.png',link:"https://developer.mozilla.org/en-US/docs/Web/CSS/" },
+    { name: 'JavaScript', icon: '/icons/javascript.png',link:"https://developer.mozilla.org/en-US/docs/Web/JavaScript" },
+    { name: 'TypeScript', icon: '/icons/typescript.png',link:"https://developer.mozilla.org/en-US/docs/Glossary/TypeScript" },
+    { name: 'React.js', icon: '/icons/react.png',link:"https://react.dev/learn" },
+    { name: 'Next.js', icon: '/icons/nextjs.png',link:"https://nextjs.org/docs" },
+    { name: 'Node.js', icon: '/icons/nodejs.png',link:"https://nodejs.org/en/learn/getting-started/introduction-to-nodejs" },
+    { name: 'Express.js', icon: '/icons/express.png',link:"https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs" },
+    { name: 'NestJS', icon: '/icons/nestjs.png',link:"https://docs.nestjs.com/" },
+    { name: 'MongoDB', icon: '/icons/mongodb.png',link:"https://www.mongodb.com/docs/manual/introduction/" },
+    { name: 'MySQL', icon: '/icons/mysql.png',link:"https://dev.mysql.com/doc/refman/8.4/en/" },
+    { name: 'Tailwind CSS', icon: '/icons/tailwind.png',link:"https://tailwindcss.com/docs/installation/using-vite" },
+    { name: 'Bootstrap', icon: '/icons/bootstrap.png',link:"https://getbootstrap.com/docs/5.0/getting-started/introduction/" },
+    { name: 'Git', icon: '/icons/git.png',link:"https://developer.mozilla.org/en-US/docs/Glossary/Git" },
+    { name: 'GitHub', icon: '/icons/github.png',link:"https://developer.mozilla.org/en-US/docs/Learn_web_development/Howto/Tools_and_setup/Using_GitHub_pages" }
   ];
 
   useEffect(() => {
@@ -113,26 +114,26 @@ export default function PortfolioPage() {
   };
 
   return (
-    <div key={windowWidth} className="min-h-screen bg-gradient-to-b from-white/50 to-transparent dark:from-[#071025] dark:via-[#061028] text-slate-900 dark:text-slate-100 overflow-x-hidden">
+    <div key={windowWidth} className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 overflow-x-hidden border m-1 border-slate-500 rounded-xl">
       <main className="max-w-6xl mx-auto px-4 sm:px-5 py-8 sm:py-12">
 
         {/* HERO SECTION */}
         <section id="home" className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-10 items-center">
           <div className="lg:col-span-7">
-            <p className="text-xs sm:text-sm uppercase tracking-wider text-slate-500 dark:text-slate-400">Full-stack & Product-focused</p>
-            <h1 className="mt-3 sm:mt-4 text-xl sm:text-2xl md:text-3xl lg:text-5xl font-extrabold leading-tight break-words">
+            <p className="text-xs sm:text-sm uppercase tracking-wider text-slate-300">Full-stack & Product-focused</p>
+            <h1 className="mt-3 sm:mt-4 text-xl sm:text-2xl text-slate-200 md:text-3xl lg:text-5xl font-extrabold leading-tight break-words">
               I craft modern, scalable web applications -
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#06b6d4] via-[#7c3aed] to-[#f472b6]">
                 from UI to APIs
               </span>
             </h1>
 
-            <p className="mt-4 sm:mt-6 text-sm sm:text-base text-slate-600 dark:text-slate-300 max-w-xl leading-relaxed">
+            <p className="mt-4 sm:mt-6 text-sm sm:text-base text-slate-300  max-w-xl leading-relaxed">
               I specialise in building fast, accessible and maintainable web applications using modern stacks like Next.js, Node.js, and scalable databases. I enjoy working on systems that feel delightful and perform reliably in production.
             </p>
 
             <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row gap-3 w-full">
-              <a href="#projects" className="flex-1 sm:flex-none text-center inline-flex items-center justify-center gap-2 rounded-full px-4 sm:px-5 py-2.5 sm:py-3 text-sm border border-slate-200/20 dark:border-slate-700 bg-white/80 dark:bg-white/3 shadow-sm hover:translate-y-[-2px] transition">Featured Projects</a>
+              <a href="#projects" className="flex-1 sm:flex-none text-center inline-flex items-center justify-center gap-2 rounded-full px-4 sm:px-5 py-2.5 sm:py-3 text-sm border text-white border-slate-200/20  bg-white/10  shadow-sm hover:translate-y-[-2px] transition">Featured Projects</a>
               <a href="#contact" className="flex-1 sm:flex-none text-center inline-flex items-center justify-center gap-2 rounded-full px-4 sm:px-5 py-2.5 sm:py-3 text-sm border border-transparent bg-gradient-to-r from-[#06b6d4] to-[#7c3aed] text-white shadow-md hover:brightness-95 transition">Hire / Contact</a>
             </div>
 
@@ -140,12 +141,12 @@ export default function PortfolioPage() {
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 rounded-full flex items-center justify-center bg-gradient-to-tr from-[#06b6d4] to-[#7c3aed] text-slate-900 font-bold text-sm">SK</div>
                 <div>
-                  <div className="text-xs sm:text-sm font-semibold break-words">Saurabh Kumar <span className='text-green-500'>•</span> A Full Stack Web Developer</div>
-                  <div className="text-xs text-slate-500 dark:text-slate-400">Full-Stack Engineer</div>
+                  <div className="text-xs sm:text-sm text-slate-200 font-semibold break-words">Saurabh Kumar <span className='text-green-500 '>•</span> A Full Stack Web Developer</div>
+                  <div className="text-xs text-slate-300 ">Full-Stack Engineer</div>
                 </div>
               </div>
 
-              <div className="flex gap-3 text-xs sm:text-sm text-slate-500 dark:text-slate-400 flex-wrap">
+              <div className="flex gap-3 text-xs sm:text-sm text-slate-300 flex-wrap">
                 <div>In Based in India</div>
                 <div className='font-extrabold text-green-500'>•</div>
                 <div>Available for remote</div>
@@ -154,8 +155,8 @@ export default function PortfolioPage() {
           </div>
 
           {/* PROFILE IMAGE */}
-          <aside className="lg:col-span-5 flex items-center justify-center">
-            <div className="w-full max-w-sm rounded-3xl p-4 sm:p-6 bg-gradient-to-br from-white/70 to-transparent dark:from-[#041421] border border-slate-200/10 dark:border-slate-800/40 shadow-xl">
+          <aside className="lg:col-span-5 flex items-center justify-center drop-shadow-current ">
+            <div className="w-full max-w-sm rounded-3xl p-4 sm:p-6 bg-gradient-to-br bg-slate-800/50 backdrop-blur-sm border border-slate-500 shadow-xl">
               <div className="flex-1 flex justify-center">
                 <div className="relative w-32 h-32 sm:w-48 sm:h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-2 border-[#8ab4f8]/50 hover:scale-105 transition-transform duration-300">
                   <Image
@@ -169,10 +170,10 @@ export default function PortfolioPage() {
                 </div>
               </div>
 
-              <div className="mt-4 grid grid-cols-3 gap-2 sm:gap-3 text-center">
-                <div><div className="text-base sm:text-lg font-semibold">5+</div><div className="text-xs text-slate-500 dark:text-slate-400">Month</div></div>
-                <div><div className="text-base sm:text-lg font-semibold">5+</div><div className="text-xs text-slate-500 dark:text-slate-400">Projects</div></div>
-                <div><div className="text-base sm:text-lg font-semibold"></div>50+<div className="text-xs text-slate-500 dark:text-slate-400">Clients</div></div>
+              <div className="mt-4 grid grid-cols-3 gap-2 sm:gap-3 text-center text-slate-200">
+                <div><div className="text-base sm:text-lg font-semibold">5+</div><div className="text-xs text-slate-300 ">Month</div></div>
+                <div><div className="text-base sm:text-lg font-semibold">5+</div><div className="text-xs text-slate-300 ">Projects</div></div>
+                <div><div className="text-base sm:text-lg font-semibold"></div>50+<div className="text-xs text-slate-300 ">Clients</div></div>
               </div>
             </div>
           </aside>
@@ -180,26 +181,26 @@ export default function PortfolioPage() {
 
         {/* FEATURED PROJECTS */}
         <section id="projects" className="mt-12 sm:mt-16">
-          <h2 className="text-xl sm:text-2xl font-bold">Featured Projects</h2>
-          <p className="mt-2 text-xs sm:text-sm text-slate-600 dark:text-slate-400 max-w-2xl">Browse projects showcasing UI design and backend architecture — click &apos;View Project&apos; for details.</p>
+          <h2 className="text-xl sm:text-2xl text-purple-400 font-bold">Featured Projects</h2>
+          <p className="mt-2 text-xs sm:text-sm text-slate-300  max-w-2xl">Browse projects showcasing UI design and backend architecture — click &apos;View Project&apos; for details.</p>
 
-          <div className="mt-4 sm:mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+          <div className="mt-4 sm:mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 text-slate-200">
             {featured.map((p) => (
-              <article key={p.title} className="group rounded-2xl p-4 sm:p-6 bg-white dark:bg-[#031421] border border-slate-200/8 dark:border-slate-800/40 shadow-sm hover:shadow-lg transform transition hover:-translate-y-2 min-h-[220px] sm:min-h-[240px]">
+              <article key={p.title} className="group rounded-2xl p-4 sm:p-6 bg-gradient-to-br bg-slate-800/50 backdrop-blur-sm border border-slate-500  shadow-sm hover:shadow-lg transform transition hover:-translate-y-2 min-h-[220px] sm:min-h-[240px]">
                 <div className="flex items-start justify-between gap-2">
-                  <h3 className="text-base sm:text-lg font-semibold break-words flex-1">{p.title}</h3>
-                  <div className="text-xs text-slate-500 dark:text-slate-400 whitespace-nowrap">Featured</div>
+                  <h3 className="text-base sm:text-lg font-semibold break-words flex-1 text-[#5893f3]">{p.title}</h3>
+                  <div className="text-xs border border-slate-500 text-slate-300 p-2 rounded-full whitespace-nowrap">Featured</div>
                 </div>
-                <p className="mt-3 text-xs sm:text-sm text-slate-600 dark:text-slate-300">{p.subtitle}</p>
+                <p className="mt-3 text-xs sm:text-sm text-slate-200 ">{p.subtitle}</p>
 
                 <div className="mt-4 flex flex-wrap gap-2">
                   {p.tags.map((t) => (
-                    <span key={t} className="text-xs px-2 py-1 rounded-full bg-slate-100 dark:bg-white/5 text-slate-700 dark:text-slate-200">{t}</span>
+                    <span key={t} className="text-xs px-2 py-1 rounded-full bg-slate-700 text-white ">{t}</span>
                   ))}
                 </div>
 
                 <div className="mt-6">
-                  <a href={p.link} className="flex-1 text-center text-xs sm:text-sm px-3 py-2 rounded-md border border-slate-200/10 dark:border-slate-700">View Project →</a>
+                  <a href={p.link} className="flex-1 text-center text-xs sm:text-sm px-3 py-2 rounded-md border border-slate-300 hover:bg-[#8ab4f8] hover:text-black">View Project →</a>
                 </div>
               </article>
             ))}
@@ -207,16 +208,18 @@ export default function PortfolioPage() {
         </section>
 
         {/* SKILLS */}
-        <section id="skills" className="mt-12 sm:mt-16">
-          <h2 className="text-xl sm:text-2xl font-bold">Tech & Skills</h2>
+        <section id="skills" className="mt-12 sm:mt-16 text-slate-200">
+          <h2 className="text-xl sm:text-2xl font-bold text-purple-400">Tech & Skills</h2>
           <div className="mt-6 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
             {skills.map((s) => (
-              <div
+              <Link
                 key={s.name}
-                className="group flex flex-col items-center gap-3 p-4 sm:p-5 rounded-xl bg-white dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700/50 shadow-sm hover:shadow-md hover:border-slate-300 dark:hover:border-slate-600 transition-all duration-200"
+                href = {s.link}
+                target='_blank'
+                className="group flex flex-col items-center gap-3 p-4 sm:p-5 rounded-xl bg-gradient-to-br bg-slate-800/50 backdrop-blur-sm border border-slate-500 shadow-sm hover:shadow-md hover:border-slate-300  transition-all duration-200"
               >
                 {/* Skill Icon - Larger */}
-                <div className="w-16 h-16 sm:w-20 sm:h-20 flex-shrink-0 rounded-2xl bg-slate-50 dark:bg-slate-700/30 flex items-center justify-center">
+                <div className="w-16 h-16 sm:w-20 sm:h-20 flex-shrink-0 rounded-2xl bg-slate-50  flex items-center justify-center">
                   <Image
                     src={s.icon}
                     alt={s.name}
@@ -227,19 +230,19 @@ export default function PortfolioPage() {
                 </div>
 
                 {/* Skill Name */}
-                <span className="text-sm sm:text-base font-medium text-slate-700 dark:text-slate-200 text-center">
+                <span className="text-sm sm:text-base font-medium text-slate-200  text-center">
                   {s.name}
                 </span>
-              </div>
+              </Link>
             ))}
           </div>
         </section>
 
         {/* ABOUT */}
         <section id="about" className="mt-12 sm:mt-16 grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8 items-start">
-          <div className="lg:col-span-2 order-2 lg:order-none">
-            <h2 className="text-xl sm:text-2xl font-bold">About Me</h2>
-            <p className="mt-4 text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed max-w-2xl">
+          <div className="lg:col-span-2 order-2 lg:order-none border border-slate-600 p-5 rounded-xl">
+            <h2 className="text-xl sm:text-2xl font-bold text-purple-400 ">About Me</h2>
+            <p className="mt-4 text-sm sm:text-base text-slate-300  leading-relaxed max-w-2xl">
               I build end-to-end products — from defining interfaces and component systems to designing APIs and selecting the right data models. I focus on clarity, performance, and developer experience so teams can scale effectively.
             </p>
 
@@ -250,17 +253,17 @@ export default function PortfolioPage() {
                 ['Databases', 'MongoDB, MySQL / PostgreSQL, Redis'],
                 ['Deploy', 'Vercel, Docker, CI/CD, Observability'],
               ].map(([title, desc]) => (
-                <div key={title} className="p-4 rounded-lg bg-slate-50 dark:bg-white/3 border border-slate-200/8 dark:border-slate-800/40">
-                  <div className="text-sm font-semibold">{title}</div>
-                  <div className="mt-2 text-xs text-slate-600 dark:text-slate-400 break-words">{desc}</div>
+                <div key={title} className="p-4 rounded-lg bg-gradient-to-br bg-slate-800/50 backdrop-blur-sm border border-slate-500">
+                  <div className="text-sm font-semibold text-slate-200">{title}</div>
+                  <div className="mt-2 text-xs text-slate-300  break-words">{desc}</div>
                 </div>
               ))}
             </div>
           </div>
 
-          <aside className="lg:col-span-1 order-1 lg:order-none bg-white/60 dark:bg-[#041427]/60 rounded-2xl p-4 sm:p-6 border border-slate-200/8 dark:border-slate-800/40">
-            <div className="text-sm font-semibold">Quick Facts</div>
-            <ul className="mt-3 text-xs sm:text-sm text-slate-700 dark:text-slate-300 space-y-2">
+          <aside className="lg:col-span-1 order-1 lg:order-none   rounded-2xl p-4 sm:p-6 bg-gradient-to-br bg-slate-800/50 backdrop-blur-sm border border-slate-500 ">
+            <div className="text-sm font-semibold text-purple-400">Quick Facts</div>
+            <ul className="mt-3 text-xs sm:text-sm text-slate-300  space-y-2">
               <li>📍 Based in India</li>
               <li>💼 Open to freelance & full-time</li>
               <li>⚡️ Remote-friendly</li>
@@ -274,15 +277,15 @@ export default function PortfolioPage() {
 
         {/* CONTACT */}
         <section id="contact" className="mt-12 sm:mt-16 mb-12 sm:mb-20 grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
-          <div>
-            <h2 className="text-xl sm:text-2xl font-bold">Get in touch</h2>
-            <p className="mt-3 text-sm sm:text-base text-slate-600 dark:text-slate-300">
+          <div className='border border-slate-500 p-5 rounded-xl'>
+            <h2 className="text-xl sm:text-2xl font-bold text-purple-400">Get in touch</h2>
+            <p className="mt-3 text-sm sm:text-base text-slate-300">
               Have a project or want to say hi? Send a short message and I&apos;ll reply.
             </p>
 
             <form
               onSubmit={handleSubmit}
-              className="mt-4 sm:mt-6 grid grid-cols-1 gap-3 sm:gap-4"
+              className="mt-4 sm:mt-6 grid grid-cols-1 gap-3 sm:gap-4 text-white"
             >
               {/* 👤 Name */}
               <input
@@ -292,8 +295,8 @@ export default function PortfolioPage() {
                 onChange={handleChange}
                 placeholder="Your name"
                 readOnly={!!session?.user?.name}
-                className={`w-full p-2.5 sm:p-3 text-sm rounded-md ${session?.user ? "bg-gray-200 dark:bg-gray-800 cursor-not-allowed" : "bg-slate-50 dark:bg-white/5"
-                  } border border-slate-200/8 dark:border-slate-800/40`}
+                className={`w-full p-2.5 sm:p-3 text-sm rounded-md ${session?.user ? "bg-slate-800/50 backdrop-blur-sm border border-slate-500  cursor-not-allowed" : "bg-slate-800/50 backdrop-blur-sm border border-slate-500"
+                  } border border-slate-500 `}
               />
 
               {/* 📧 Email */}
@@ -305,8 +308,8 @@ export default function PortfolioPage() {
                 onChange={handleChange}
                 placeholder="Email"
                 readOnly={!!session?.user?.email}
-                className={`w-full p-2.5 sm:p-3 text-sm rounded-md ${session?.user ? "bg-gray-200 dark:bg-gray-800 cursor-not-allowed" : "bg-slate-50 dark:bg-white/5"
-                  } border border-slate-200/8 dark:border-slate-800/40`}
+                className={`w-full p-2.5 sm:p-3 text-sm rounded-md ${session?.user ? "bg-slate-800/50 backdrop-blur-sm border border-slate-500  cursor-not-allowed" : "bg-slate-800/50 backdrop-blur-sm border border-slate-500 "
+                  } border border-slate-500 `}
               />
 
               {/* 💬 Message */}
@@ -316,7 +319,7 @@ export default function PortfolioPage() {
                 value={formData.message}
                 onChange={handleChange}
                 placeholder="Message"
-                className="w-full p-2.5 sm:p-3 text-sm rounded-md bg-slate-50 dark:bg-white/5 border border-slate-200/8 dark:border-slate-800/40 h-32 sm:h-36 resize-none"
+                className="w-full p-2.5 sm:p-3 text-sm rounded-md bg-slate-800/50 backdrop-blur-sm border border-slate-500 h-32 sm:h-36 resize-none"
               />
 
               {/* 🔘 Button */}
@@ -364,16 +367,16 @@ export default function PortfolioPage() {
             </form>
           </div>
 
-          <aside className="flex h-full flex-col justify-between rounded-xl border border-slate-200/20 dark:border-slate-800/40 bg-white dark:bg-[#041427] p-5 sm:p-6">
+          <aside className="flex h-full flex-col justify-between rounded-xl bg-slate-800/50 backdrop-blur-sm border border-slate-500  p-5 sm:p-6 text-slate-200">
             {/* Top Content */}
             <div>
-              <h3 className="text-sm sm:text-base font-semibold text-slate-900 dark:text-slate-100">
+              <h3 className="text-sm sm:text-base text-purple-400 font-semibold">
                 Contact
               </h3>
 
-              <div className="mt-5 space-y-4 text-xs sm:text-sm text-slate-600 dark:text-slate-300">
+              <div className="mt-5 space-y-4 text-xs sm:text-sm ">
                 <div>
-                  <span className="block text-slate-500 dark:text-slate-400">
+                  <span className="block">
                     Email
                   </span>
                   <a
@@ -385,7 +388,7 @@ export default function PortfolioPage() {
                 </div>
 
                 <div>
-                  <span className="block text-slate-500 dark:text-slate-400">
+                  <span className="block">
                     Location
                   </span>
                   <span className="font-medium">
@@ -393,8 +396,8 @@ export default function PortfolioPage() {
                   </span>
                 </div>
               </div>
-              <div className="my-6 h-px bg-slate-200 dark:bg-slate-800" />
-              <p className="text-xs sm:text-sm text-slate-500 dark:text-slate-400 leading-relaxed">
+              <div className="my-6 h-px bg-slate-200 " />
+              <p className="text-xs sm:text-sm  leading-relaxed">
                 Open to full-time roles, internships, and freelance opportunities in
                 full-stack web development.
               </p>
@@ -404,9 +407,9 @@ export default function PortfolioPage() {
                 href="/resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="relative inline-flex w-full items-center justify-center rounded-md px-5 py-2.5 text-sm font-semibold text-white bg-white dark:text-black shadow-md overflow-hidden transition hover:scale-105 hover:shadow-2xl animate-pulse hover:bg-blue-200"
+               className="relative inline-flex w-full items-center justify-center rounded-md px-5 py-2.5 text-sm font-bold text-white bg-gradient-to-r from-blue-500 to-purple-600 shadow-md overflow-hidden transition hover:scale-105 hover:shadow-2xl hover:ring-2 hover:ring-purple-400/50"
               >
-                View Resume
+                View Resume 
               </a>
 
             </div>

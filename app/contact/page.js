@@ -71,7 +71,7 @@ export default function ContactPageOptimized() {
 
 
   return (
-    <main className="bg-gradient-to-b from-[#061226] to-[#000712] text-white min-h-screen">
+    <main className="from-slate-900 via-slate-800 to-slate-900 overflow-x-hidden border m-1 border-slate-500 rounded-xl text-white min-h-screen">
       {/* HERO */}
       <section className="pt-20 pb-6 px-4 sm:px-6 md:px-12 lg:px-24">
         <div className="max-w-4xl mx-auto text-center">
@@ -85,11 +85,11 @@ export default function ContactPageOptimized() {
       </section>
 
       {/* MAIN SPLIT */}
-      <section className="px-4 sm:px-6 md:px-12 lg:px-24 pb-12">
+      <section className="px-4 sm:px-6 md:px-12 lg:px-24 pb-12 ">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
           {/* LEFT: FORM */}
-          <div className="lg:col-span-7">
-            <div className="bg-white/5 backdrop-blur-md border border-white/6 rounded-2xl p-5 sm:p-8 shadow-lg">
+          <div className="lg:col-span-7 ">
+            <div className="bg-white/5 backdrop-blur-md   border border-slate-500 rounded-2xl p-5 sm:p-8 shadow-lg">
 
               <p
                 role="alert"
@@ -98,7 +98,7 @@ export default function ContactPageOptimized() {
                 💡 Please ensure you are signed in before submitting.
               </p>
 
-              <h2 className="text-xl sm:text-2xl font-semibold">
+              <h2 className="text-xl sm:text-2xl text-purple-400 font-semibold">
                 Contact Form
               </h2>
               <p className="text-sm text-gray-300 mt-1">
@@ -158,8 +158,8 @@ export default function ContactPageOptimized() {
 
                 <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 sm:gap-4">
                   <div className="text-xs sm:text-sm text-gray-300">
-                    Prefer email?{" "}
-                    <a href="mailto:saurabhkumar930308@gmail.com" className="underline">
+                    Prefer email ?{" "}
+                    <a href="mailto:saurabhkumar930308@gmail.com" className="underline text-blue-400">
                       saurabhkumar930308@gmail.com
                     </a>
                   </div>
@@ -187,13 +187,13 @@ export default function ContactPageOptimized() {
             </div>
 
             <div className="mt-6 flex flex-wrap gap-3">
-              <div className="px-3 py-2 rounded-lg bg-white/10 text-xs sm:text-sm">
+              <div className="px-3 py-2 rounded-lg bg-white/10 text-xs sm:text-sm border border-slate-500">
                 Trusted by startups
               </div>
-              <div className="px-3 py-2 rounded-lg bg-white/10 text-xs sm:text-sm">
+              <div className="px-3 py-2 rounded-lg bg-white/10 text-xs sm:text-sm border border-slate-500">
                 Fast responses
               </div>
-              <div className="px-3 py-2 rounded-lg bg-white/10 text-xs sm:text-sm">
+              <div className="px-3 py-2 rounded-lg bg-white/10 text-xs sm:text-sm border border-slate-500">
                 Secure & private
               </div>
             </div>
@@ -201,8 +201,8 @@ export default function ContactPageOptimized() {
 
           {/* RIGHT: INFO + MAP */}
           <aside className="lg:col-span-5 space-y-6">
-            <div className="rounded-2xl p-5 sm:p-6 backdrop-blur-md bg-white/10 border border-white/10 shadow-md">
-              <h3 className="text-lg sm:text-xl font-bold">
+            <div className="rounded-2xl p-5 sm:p-6 backdrop-blur-md bg-white/10  border border-slate-500 shadow-md">
+              <h3 className="text-lg sm:text-xl text-purple-400 font-bold">
                 🌍 Remote-First. All India.
               </h3>
               <p className="mt-2 text-sm text-gray-300">
@@ -211,8 +211,8 @@ export default function ContactPageOptimized() {
               </p>
             </div>
 
-            <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-5 sm:p-6">
-              <h4 className="font-semibold text-lg mb-4">Other ways to reach</h4>
+            <div className="bg-white/5 backdrop-blur-md  border border-slate-500 rounded-2xl p-5 sm:p-6">
+              <h4 className="font-semibold text-lg text-purple-400 mb-4">Other ways to reach</h4>
               <div className="flex items-center gap-5">
 
                 {/* Instagram */}
@@ -264,7 +264,7 @@ export default function ContactPageOptimized() {
 
               </div>
             </div>
-            <div className="rounded-2xl overflow-hidden border border-white/10">
+            <div className="rounded-2xl overflow-hidden  border border-slate-500">
               <iframe
                 title="office-map"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d191053.86649614977!2d80.70130894867343!3d24.602822588671547!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39847f12a0d55141%3A0xa6208334386e35e2!2sSatna%2C%20Madhya%20Pradesh!5e1!3m2!1sen!2sin!4v1763787645936!5m2!1sen!2sin"
