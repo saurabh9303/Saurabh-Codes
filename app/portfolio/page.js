@@ -26,7 +26,7 @@ export default function PortfolioPage() {
   const featured = [
     { title: 'Chitrakoot Tourism Website', subtitle: 'Journey through Nature, Myth & Devotion', tags: ['React.js', 'Node.js', 'Express.js', 'MongoDB', 'Tailwind CSS', 'Bootstrap'], link: 'https://chitrakoot-tourism-awl4.onrender.com/' },
     { title: 'Cyber Cafe Management System', subtitle: 'Designed and developed a full-stack Cyber Cafe Management System to manage digital services and customer operations.', tags: ['Next.js', 'Node.js', 'Tailwind CSS', 'MongoDB'], link: 'https://saurabh-cafe-one.vercel.app/' },
-    { title: 'Jewelry Shop Management System', subtitle: 'Designed and developed a Jewelry Shop Management System to manage products, sales, customers, and billing operations.', tags: ['Next.js', 'Node.js', 'Razorpay', 'Tailwind CSS', 'MongoDB'], link: 'https://github.com/saurabh9303/Jewellery-shop' }
+    { title: 'Jewelry Shop Management System', subtitle: 'Designed and developed a Jewelry Shop Management System to manage products, sales, customers, and billing operations.', tags: ['Next.js', 'Node.js', 'Razorpay', 'Tailwind CSS', 'MongoDB'], link: 'https://jewellery-shop-alpha.vercel.app/' }
   ];
 
   const skills = [

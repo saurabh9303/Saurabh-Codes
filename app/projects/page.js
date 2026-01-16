@@ -59,7 +59,7 @@ export default function ProjectsGrid() {
         "Role-based admin panel",
       ],
       screenshot: "/jewelry-shop-ss.jpg",
-      live: "https://your-jewelry-project.vercel.app/",
+      live: "https://jewellery-shop-alpha.vercel.app/",
       source: "https://github.com/saurabh9303/Jewellery-shop",
     },
   ];
