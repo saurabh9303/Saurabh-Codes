@@ -40,9 +40,9 @@ export default function ProjectsGrid() {
     },
     {
       id: 3,
-      title: "Jewelry Shop Management System",
+      title: "Jewellery Shop Management System",
       short:
-        "A full-stack e-commerce app for managing jewelry products, orders, and online payments.",
+        "A full-stack e-commerce app for managing Jewellery products, orders, and online payments.",
       tech: [
         "Next.js",
         "NextAuth",
