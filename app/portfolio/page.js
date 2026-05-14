@@ -30,21 +30,27 @@ export default function PortfolioPage() {
   ];
 
   const skills = [
-    { name: 'HTML', icon: '/icons/html.png',link:"https://developer.mozilla.org/en-US/docs/Web/HTML" },
-    { name: 'CSS', icon: '/icons/css.png',link:"https://developer.mozilla.org/en-US/docs/Web/CSS/" },
-    { name: 'JavaScript', icon: '/icons/javascript.png',link:"https://developer.mozilla.org/en-US/docs/Web/JavaScript" },
-    { name: 'TypeScript', icon: '/icons/typescript.png',link:"https://developer.mozilla.org/en-US/docs/Glossary/TypeScript" },
-    { name: 'React.js', icon: '/icons/react.png',link:"https://react.dev/learn" },
-    { name: 'Next.js', icon: '/icons/nextjs.png',link:"https://nextjs.org/docs" },
-    { name: 'Node.js', icon: '/icons/nodejs.png',link:"https://nodejs.org/en/learn/getting-started/introduction-to-nodejs" },
-    { name: 'Express.js', icon: '/icons/express.png',link:"https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs" },
-    { name: 'NestJS', icon: '/icons/nestjs.png',link:"https://docs.nestjs.com/" },
-    { name: 'MongoDB', icon: '/icons/mongodb.png',link:"https://www.mongodb.com/docs/manual/introduction/" },
-    { name: 'MySQL', icon: '/icons/mysql.png',link:"https://dev.mysql.com/doc/refman/8.4/en/" },
-    { name: 'Tailwind CSS', icon: '/icons/tailwind.png',link:"https://tailwindcss.com/docs/installation/using-vite" },
-    { name: 'Bootstrap', icon: '/icons/bootstrap.png',link:"https://getbootstrap.com/docs/5.0/getting-started/introduction/" },
-    { name: 'Git', icon: '/icons/git.png',link:"https://developer.mozilla.org/en-US/docs/Glossary/Git" },
-    { name: 'GitHub', icon: '/icons/github.png',link:"https://developer.mozilla.org/en-US/docs/Learn_web_development/Howto/Tools_and_setup/Using_GitHub_pages" }
+    { name: 'HTML', icon: '/icons/html.png', link: "https://developer.mozilla.org/en-US/docs/Web/HTML" },
+    { name: 'CSS', icon: '/icons/css.png', link: "https://developer.mozilla.org/en-US/docs/Web/CSS/" },
+    { name: 'JavaScript', icon: '/icons/javascript.png', link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript" },
+    { name: 'TypeScript', icon: '/icons/typescript.png', link: "https://developer.mozilla.org/en-US/docs/Glossary/TypeScript" },
+    { name: 'React.js', icon: '/icons/react.png', link: "https://react.dev/learn" },
+    { name: 'Next.js', icon: '/icons/nextjs.png', link: "https://nextjs.org/docs" },
+    { name: 'Node.js', icon: '/icons/nodejs.png', link: "https://nodejs.org/en/learn/getting-started/introduction-to-nodejs" },
+    { name: 'Express.js', icon: '/icons/express.png', link: "https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs" },
+    { name: 'NestJS', icon: '/icons/nestjs.png', link: "https://docs.nestjs.com/" },
+    {
+      name: 'Socket.IO', icon: "/icons/socketio.png", link: "https://socket.io/docs/v4/"
+    },
+    {
+      name: "WebSockets", icon: "/icons/websockets.png", link: "https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API"
+    },
+    { name: 'MongoDB', icon: '/icons/mongodb.png', link: "https://www.mongodb.com/docs/manual/introduction/" },
+    { name: 'MySQL', icon: '/icons/mysql.png', link: "https://dev.mysql.com/doc/refman/8.4/en/" },
+    { name: 'Tailwind CSS', icon: '/icons/tailwind.png', link: "https://tailwindcss.com/docs/installation/using-vite" },
+    { name: 'Bootstrap', icon: '/icons/bootstrap.png', link: "https://getbootstrap.com/docs/5.0/getting-started/introduction/" },
+    { name: 'Git', icon: '/icons/git.png', link: "https://developer.mozilla.org/en-US/docs/Glossary/Git" },
+    { name: 'GitHub', icon: '/icons/github.png', link: "https://developer.mozilla.org/en-US/docs/Learn_web_development/Howto/Tools_and_setup/Using_GitHub_pages" }
   ];
 
   useEffect(() => {
@@ -214,7 +220,7 @@ export default function PortfolioPage() {
             {skills.map((s) => (
               <Link
                 key={s.name}
-                href = {s.link}
+                href={s.link}
                 target='_blank'
                 className="group flex flex-col items-center gap-3 p-4 sm:p-5 rounded-xl bg-gradient-to-br bg-slate-800/50 backdrop-blur-sm border border-slate-500 shadow-sm hover:shadow-md hover:border-slate-300  transition-all duration-200"
               >
@@ -407,9 +413,9 @@ export default function PortfolioPage() {
                 href="/resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-               className="relative inline-flex w-full items-center justify-center rounded-md px-5 py-2.5 text-sm font-bold text-white bg-gradient-to-r from-blue-500 to-purple-600 shadow-md overflow-hidden transition hover:scale-105 hover:shadow-2xl hover:ring-2 hover:ring-purple-400/50"
+                className="relative inline-flex w-full items-center justify-center rounded-md px-5 py-2.5 text-sm font-bold text-white bg-gradient-to-r from-blue-500 to-purple-600 shadow-md overflow-hidden transition hover:scale-105 hover:shadow-2xl hover:ring-2 hover:ring-purple-400/50"
               >
-                View Resume 
+                View Resume
               </a>
 
             </div>
